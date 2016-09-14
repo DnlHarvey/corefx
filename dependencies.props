@@ -1,17 +1,17 @@
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <!-- Source of truth for dependency tooling: the commit hash of the dotnet/versions master branch as of the last auto-upgrade. -->
   <PropertyGroup>
-    <CoreFxCurrentRef>24e0f146a24b25eeb1544c551a461a39181f1147</CoreFxCurrentRef>
-    <CoreClrCurrentRef>ffc9b4569353c038676869b54cfe0bfed7e4badf</CoreClrCurrentRef>
-    <ExternalCurrentRef>27f6ea4ce5a7fcc25b5bf8dc39fb60c11745376a</ExternalCurrentRef>
-    <ProjectNTfsCurrentRef>27f6ea4ce5a7fcc25b5bf8dc39fb60c11745376a</ProjectNTfsCurrentRef>
+    <CoreFxCurrentRef>f64d8215b92f259b8565ee738c34c27bf7886462</CoreFxCurrentRef>
+    <CoreClrCurrentRef>f64d8215b92f259b8565ee738c34c27bf7886462</CoreClrCurrentRef>
+    <ExternalCurrentRef>f64d8215b92f259b8565ee738c34c27bf7886462</ExternalCurrentRef>
+    <ProjectNTfsCurrentRef>f64d8215b92f259b8565ee738c34c27bf7886462</ProjectNTfsCurrentRef>
   </PropertyGroup>
 
   <!-- Auto-upgraded properties for each build info dependency. -->
   <PropertyGroup>
-    <CoreFxExpectedPrerelease>beta-devapi-24503-01</CoreFxExpectedPrerelease>
-    <CoreClrExpectedPrerelease>beta-24503-03</CoreClrExpectedPrerelease>
-    <ExternalExpectedPrerelease>beta-24502-00</ExternalExpectedPrerelease>
+    <CoreFxExpectedPrerelease>beta-devapi-24513-01</CoreFxExpectedPrerelease>
+    <CoreClrExpectedPrerelease>beta-24513-04</CoreClrExpectedPrerelease>
+    <ExternalExpectedPrerelease>beta-24513-00</ExternalExpectedPrerelease>
   </PropertyGroup>
 
   <!-- Full package version strings that are used in other parts of the build. -->
@@ -90,7 +90,7 @@
       Verify it at a static version rather than referencing the build-info.
     -->
     <StaticDependency Include="Microsoft.xunit.netcore.extensions;Microsoft.DotNet.BuildTools.TestSuite">
-      <Version>1.0.0-prerelease-00731-01</Version>
+      <Version>1.0.0-prerelease-00807-03</Version>
     </StaticDependency>
 
     <DependencyBuildInfo Include="@(StaticDependency)">

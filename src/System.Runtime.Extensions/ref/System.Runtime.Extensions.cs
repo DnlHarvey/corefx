@@ -8,6 +8,15 @@
 
 namespace System
 {
+   public partial class AppDomain
+   {
+       private AppDomain() {}
+       public static AppDomain CurrentDomain { get { return default(AppDomain); } }
+       public string BaseDirectory { get { return default(string); } }
+       public string RelativeSearchPath { get { return default(string); } }
+       public event System.UnhandledExceptionEventHandler UnhandledException { add { } remove { } } 
+   }
+
     [Flags]
     public enum Base64FormattingOptions
     {
@@ -773,11 +782,13 @@ namespace System.IO
     {
         public static readonly char AltDirectorySeparatorChar;
         public static readonly char DirectorySeparatorChar;
+        public static readonly char[] InvalidPathChars;
         public static readonly char PathSeparator;
         public static readonly char VolumeSeparatorChar;
         public static string ChangeExtension(string path, string extension) { return default(string); }
         public static string Combine(string path1, string path2) { return default(string); }
         public static string Combine(string path1, string path2, string path3) { return default(string); }
+        public static string Combine(string path1, string path2, string path3, string path4) { return default(string); }
         public static string Combine(params string[] paths) { return default(string); }
         public static string GetDirectoryName(string path) { return default(string); }
         public static string GetExtension(string path) { return default(string); }

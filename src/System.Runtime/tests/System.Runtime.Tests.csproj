@@ -10,8 +10,6 @@
     <AssemblyName>System.Runtime.Tests</AssemblyName>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <NoWarn>1718</NoWarn>
-    <NugetTargetMoniker Condition="'$(TargetGroup)'=='netstandard1.7' AND '$(NugetTargetMoniker)'==''">.NETStandard,Version=v1.7</NugetTargetMoniker>
-    <NugetTargetMoniker Condition="'$(NugetTargetMoniker)'==''">.NETStandard,Version=v1.5</NugetTargetMoniker>
   </PropertyGroup>
   <ItemGroup Condition="'$(TargetGroup)'=='netstandard1.7'">
     <TestNugetTargetMoniker Include="$(NugetTargetMoniker)">
@@ -99,12 +97,14 @@
   <ItemGroup Condition="'$(TargetGroup)' == 'netstandard1.7'">
     <Compile Include="ArrayTests.netstandard1.7.cs" />
     <Compile Include="CompareToTests.cs" />
+    <Compile Include="System\DateTimeOffsetTests.netstandard1.7.cs" />
     <Compile Include="DecimalTests.netstandard1.7.cs" />
     <Compile Include="EnumTests.netstandard1.7.cs" />
     <Compile Include="GetTypeCodeTests.cs" />
     <Compile Include="TimeZoneInfoTests.netstandard1.7.cs" />
     <Compile Include="TimeZoneNotFoundExceptionTests.netstandard1.7.cs" />
     <Compile Include="VersionTests.netstandard1.7.cs" />
+    <Compile Include="Microsoft\Win32\SafeHandles\SafeHandleZeroOrMinusOneIsInvalid.netstandard1.7.cs" />
     <Compile Include="System\AccessViolationExceptionTests.cs" />
     <Compile Include="System\ExternalExceptionTests.cs" />
     <Compile Include="System\ApplicationExceptionTests.cs" />
@@ -114,6 +114,8 @@
     <Compile Include="System\NotFiniteNumberExceptionTests.cs" />
     <Compile Include="System\StackOverflowExceptionTests.cs" />
     <Compile Include="System\SystemExceptionTests.cs" />
+    <Compile Include="System\StringTests.netstandard1.7.cs" />
+    <Compile Include="System\Threading\WaitHandleTests.netstandard1.7.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="project.json" />
@@ -123,24 +125,8 @@
       <Project>{1e689c1b-690c-4799-bde9-6e7990585894}</Project>
       <Name>System.Runtime</Name>
     </ProjectReference>
-    <!-- ToDo: Remove this reference to the live package of System.Runtime.Extensions once prerelease gets updated again -->
-    <ProjectReference Include="..\..\System.Runtime.Extensions\pkg\System.Runtime.Extensions.pkgproj">
-      <Name>System.Globalization</Name>
-    </ProjectReference>
-    <!-- ToDo: Remove this reference to the live package of System.Globalization once prerelease gets updated again -->
-    <ProjectReference Include="..\..\System.Globalization\pkg\System.Globalization.pkgproj">
-      <Name>System.Globalization</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\System.Private.Uri\pkg\System.Private.Uri.pkgproj">
     </ProjectReference>
-    <!-- ToDo: Remove this P2P reference once new packages are produced and updated -->
-    <ProjectReference Include="..\..\System.Reflection\pkg\System.Reflection.pkgproj" />
-    <!-- ToDo: Remove this P2P reference once new packages are produced and updated -->
-    <ProjectReference Include="..\..\System.Reflection.Primitives\pkg\System.Reflection.Primitives.pkgproj" />
-    <!-- ToDo: Remove this P2P reference once new packages are produced and updated -->
-    <ProjectReference Include="..\..\System.Threading.Tasks\pkg\System.Threading.Tasks.pkgproj" />
-    <!-- ToDo: Remove this P2P reference once new packages are produced and updated -->
-    <ProjectReference Include="..\..\System.Runtime.InteropServices\pkg\System.Runtime.InteropServices.pkgproj" />
   </ItemGroup>
   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.targets))\dir.targets" />
 </Project>

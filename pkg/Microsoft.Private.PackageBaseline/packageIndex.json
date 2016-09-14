@@ -678,7 +678,8 @@
         "4.0.0.0": "4.0.0",
         "4.1.0.0": "4.1.0",
         "4.1.1.0": "4.1.1",
-        "4.0.1.0": "4.0.1"
+        "4.0.1.0": "4.0.1",
+        "4.2.0.0": "4.3.0"
       }
     },
     "System.Buffers": {
@@ -1680,7 +1681,8 @@
       "BaselineVersion": "4.0.1",
       "AssemblyVersionInPackageVersion": {
         "4.0.0.0": "4.0.0",
-        "4.0.1.0": "4.0.1"
+        "4.0.1.0": "4.0.1",
+        "4.1.0.0": "4.3.0"
       }
     },
     "System.Runtime.InteropServices": {
@@ -1857,7 +1859,8 @@
         "4.0.0.0": "4.0.0",
         "4.1.0.0": "4.1.0",
         "4.2.0.0": "4.2.0",
-        "4.2.1.0": "4.2.1"
+        "4.2.1.0": "4.2.1",
+        "4.3.0.0": "4.3.0"
       }
     },
     "System.Security.Cryptography.Csp": {
@@ -1887,7 +1890,8 @@
       "BaselineVersion": "4.0.0",
       "AssemblyVersionInPackageVersion": {
         "4.0.0.0": "4.0.0",
-        "4.0.1.0": "4.3.0"
+        "4.0.1.0": "4.3.0",
+        "4.1.0.0": "4.3.0"
       }
     },
     "System.Security.Cryptography.Pkcs": {
@@ -2426,10 +2430,10 @@
     },
     "System.Json": {},
     "System.Private.Xml": {
-        "BaselineVersion": "4.3.0"
+      "BaselineVersion": "4.3.0"
     },
     "System.Private.Xml.Linq": {
-        "BaselineVersion": "4.3.0"
+      "BaselineVersion": "4.3.0"
     },
     "System.Security.Permissions": {
       "AssemblyVersionInPackageVersion": {
